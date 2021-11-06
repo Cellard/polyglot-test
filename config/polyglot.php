@@ -9,13 +9,13 @@ return [
     |
     | This option is used to enable or disable some polyglot functionality.
     |
-    | 'inherit'     - use pure Laravel Translator; collect string manually.
+    | 'editor'     - use pure Laravel Translator; collect string manually.
     | 'collector'   - use gettext for collecting string; use Laravel Translator for translating.
     | 'translator'  — use gettext for collecting string and for translating too.
     |
     */
 
-    'mode' => env('POLYGLOT_MODE', 'inherit'),
+    'mode' => env('POLYGLOT_MODE', 'editor'),
 
     /*
     |--------------------------------------------------------------------------
@@ -122,11 +122,8 @@ return [
         'domain' => 'messages',
 
         'passthroughs' => [
-            'validation.',
-            'passwords.',
-            'auth.',
-            'pagination.',
-            'verify.'
+            'plain.',
+            'nested.',
         ],
     ],
 ];

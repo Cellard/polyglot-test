@@ -18,7 +18,7 @@ class PolyglotServiceProvider extends PolyglotApplicationServiceProvider
     {
         Gate::define('viewPolyglot', function ($user) {
             return in_array($user->email, [
-                //
+                'test@localhost'
             ]);
         });
     }

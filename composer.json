@@ -8,11 +8,12 @@
   ],
   "license": "MIT",
   "require": {
-    "php": "^7.3|^8.0",
+    "php": "^7.4|^8.0",
     "codewiser/polyglot": "^0.1.0",
     "fruitcake/laravel-cors": "^2.0",
     "guzzlehttp/guzzle": "^7.0.1",
     "laravel/framework": "^8.65",
+    "laravel/horizon": "^5.7",
     "laravel/sanctum": "^2.11",
     "laravel/telescope": "^4.6",
     "laravel/tinker": "^2.5"
@@ -66,8 +67,8 @@
   "prefer-stable": true,
   "repositories": [
     {
-      "type": "vcs",
-      "url": "git@github.com:C0deWiser/polyglot.git"
+      "type": "path",
+      "url": "../polyglot"
     }
   ]
 }
