@@ -18,28 +18,28 @@ class PoTest extends WithUser
     public function testGetNotFound()
     {
         $this
-            ->get('polyglot/api/L10n/en/LC_MESSAGES/fake.po')
+            ->get('polyglot/api/L10n/en/LC_MESSAGES/fake')
             ->assertStatus(404);
     }
 
     public function testGetWrongCategory()
     {
         $this
-            ->get('polyglot/api/L10n/en/LC_FAKE/messages.po')
+            ->get('polyglot/api/L10n/en/LC_FAKE/messages')
             ->assertStatus(404);
     }
 
     public function testGetWrongLocale()
     {
         $this
-            ->get('polyglot/api/L10n/ze/LC_MESSAGES/messages.po')
+            ->get('polyglot/api/L10n/ze/LC_MESSAGES/messages')
             ->assertStatus(404);
     }
 
     public function testGet()
     {
         $this
-            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages.po')
+            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages')
             ->dump()
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) {
@@ -64,7 +64,7 @@ class PoTest extends WithUser
         $value = Str::random();
 
         $this
-            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages.po', [
+            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages', [
                 'msgid' => $key,
                 'msgstr' => $value,
                 'comment' => []
@@ -74,7 +74,7 @@ class PoTest extends WithUser
             ->assertStatus(200);
 
         $messages = $this
-            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages.po')
+            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages')
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) {
                 $json
@@ -93,7 +93,7 @@ class PoTest extends WithUser
         $value = Str::random();
 
         $this
-            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages.po', [
+            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages', [
                 'msgid' => 'First string.',
                 'msgstr' => $value,
                 'comment' => []
@@ -103,7 +103,7 @@ class PoTest extends WithUser
             ->assertStatus(200);
 
         $messages = $this
-            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages.po')
+            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages')
             ->assertStatus(200)
             ->json('messages');
 
@@ -118,7 +118,7 @@ class PoTest extends WithUser
         $value = Str::random();
 
         $this
-            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages.po', [
+            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages', [
                 'msgid' => $key,
                 'msgid_plural' => $key,
                 'msgstr' => [$value, $value],
@@ -129,7 +129,7 @@ class PoTest extends WithUser
             ->assertStatus(200);
 
         $messages = $this
-            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages.po')
+            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages')
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) {
                 $json
@@ -151,7 +151,7 @@ class PoTest extends WithUser
         $value = Str::random();
 
         $this
-            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages.po', [
+            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages', [
                 'msgid' => '%d plural string.',
                 'msgid_plural' => '%d plural strings.',
                 'msgstr' => [$value, $value],
@@ -162,7 +162,7 @@ class PoTest extends WithUser
             ->assertStatus(200);
 
         $messages = $this
-            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages.po')
+            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages')
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) {
                 $json
@@ -182,7 +182,7 @@ class PoTest extends WithUser
     public function testFuzzy()
     {
         $this
-            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages.po', [
+            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages', [
                 'msgid' => 'First string.',
                 'msgstr' => null,
                 'comment' => [],
@@ -193,7 +193,7 @@ class PoTest extends WithUser
             ->assertStatus(200);
 
         $messages = $this
-            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages.po')
+            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages')
             ->assertStatus(200)
             ->json('messages');
 
@@ -201,7 +201,7 @@ class PoTest extends WithUser
         $this->assertTrue($message['fuzzy']);
 
         $this
-            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages.po', [
+            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages', [
                 'msgid' => 'First string.',
                 'msgstr' => null,
                 'comment' => [],
@@ -212,7 +212,7 @@ class PoTest extends WithUser
             ->assertStatus(200);
 
         $messages = $this
-            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages.po')
+            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages')
             ->assertStatus(200)
             ->json('messages');
 
@@ -225,7 +225,7 @@ class PoTest extends WithUser
         $comment = Str::random();
 
         $this
-            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages.po', [
+            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages', [
                 'msgid' => 'First string.',
                 'msgstr' => null,
                 'comment' => [$comment],
@@ -235,7 +235,7 @@ class PoTest extends WithUser
             ->assertStatus(200);
 
         $messages = $this
-            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages.po')
+            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages')
             ->assertStatus(200)
             ->json('messages');
 
@@ -249,7 +249,7 @@ class PoTest extends WithUser
         $value = Str::random();
 
         $this
-            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages.po', [
+            ->post('polyglot/api/L10n/en/LC_MESSAGES/messages', [
                 'msgid' => 'First string.',
                 'msgstr' => $value,
                 'comment' => []
@@ -259,7 +259,7 @@ class PoTest extends WithUser
             ->assertStatus(200);
 
         $this
-            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages.po')
+            ->get('polyglot/api/L10n/en/LC_MESSAGES/messages')
             ->dump()
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) {

@@ -7,7 +7,7 @@ return array (
     'file' => 'The :attribute must be between :min and :max kilobytes.',
     'string' => 'The :attribute must be between :min and :max characters.',
     'array' => 'The :attribute must have between :min and :max items.',
-    'test' => 'w6DcakZbJL1LqbIy',
+    'test' => '690Lj8KFguDYx3YD',
   ),
   'boolean' => 'The :attribute field must be true or false.',
 );

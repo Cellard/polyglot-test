@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: ФК Зенит\n"
 "Report-Msgid-Bugs-To: pm@101media.ru\n"
 "POT-Creation-Date: 2021-09-17 11:06+0300\n"
-"PO-Revision-Date: 2021-11-07 01:21:48+0300\n"
-"Last-Translator: Ms. Abigayle Sanford II <test@localhost>\n"
+"PO-Revision-Date: 2021-11-07 17:10:12+0300\n"
+"Last-Translator: Dr. Wilfred Daniel <test@localhost>\n"
 "Language-Team: none\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
@@ -15,15 +15,15 @@ msgstr ""
 
 #: /app/Services/Auth/Passwords/PasswordBroker.php:26
 msgid "First string."
-msgstr "mdjtSPDMMnIv1TuM"
+msgstr "XoqlySsChu9o4LxL"
 
 #: /resources/views/emails/password.blade.php:22
 #: /resources/views/emails/verification.blade.php:25
 #, php-format
 msgid "%d plural string."
 msgid_plural "%d plural strings."
-msgstr[0] "iG5gC5TIRQF8zWLG"
-msgstr[1] "iG5gC5TIRQF8zWLG"
+msgstr[0] "JFXY6Jv8pSUlwnID"
+msgstr[1] "JFXY6Jv8pSUlwnID"
 
 #: /app/Services/Auth/Verifier/VerifierBroker.php:26
 msgid "Second string."
@@ -47,3 +47,19 @@ msgstr[1] "Ei2tOLR3xJAHu7xB"
 
 msgid "mk4Cb3GMETVzUSvs"
 msgstr "IIEpaJ0wiMpH7p7K"
+
+msgid "Q8ZAwV6fHLAagxbT"
+msgstr "ZywiEJAwZthqESeR"
+
+msgid "rFwIavlDTueehmzL"
+msgid_plural "rFwIavlDTueehmzL"
+msgstr[0] "QQQZulKS1D8N7uDT"
+msgstr[1] "QQQZulKS1D8N7uDT"
+
+msgid "4Y08OTsIpste6Jw4"
+msgstr "dqMfC7uu6T1NOufn"
+
+msgid "JoEd4V2cMFhQrGrT"
+msgid_plural "JoEd4V2cMFhQrGrT"
+msgstr[0] "WSpE73d8G5NiFquq"
+msgstr[1] "WSpE73d8G5NiFquq"

@@ -25,7 +25,7 @@ class JsonTest extends WithUser
     public function testGet()
     {
         $this
-            ->get('polyglot/api/L10n/en.json')
+            ->get('polyglot/api/L10n/en')
             ->dump()
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) {
@@ -41,14 +41,14 @@ class JsonTest extends WithUser
         $value = Str::random();
 
         $this
-            ->post('polyglot/api/L10n/en.json', [
+            ->post('polyglot/api/L10n/en', [
                 'key' => 'Test string',
                 'value' => $value
             ])
             ->assertStatus(200);
 
         $this
-            ->get('polyglot/api/L10n/en.json')
+            ->get('polyglot/api/L10n/en')
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) use ($value) {
                 $json
@@ -60,14 +60,14 @@ class JsonTest extends WithUser
     public function testPostDropValue()
     {
         $this
-            ->post('polyglot/api/L10n/en.json', [
+            ->post('polyglot/api/L10n/en', [
                 'key' => 'Test string',
                 'value' => null
             ])
             ->assertStatus(200);
 
         $this
-            ->get('polyglot/api/L10n/en.json')
+            ->get('polyglot/api/L10n/en')
             ->dump()
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) {

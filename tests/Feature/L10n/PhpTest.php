@@ -31,7 +31,7 @@ class PhpTest extends WithUser
     public function testGetPlain()
     {
         $this
-            ->get('polyglot/api/L10n/en/plain.php')
+            ->get('polyglot/api/L10n/en/plain')
             ->dump()
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) {
@@ -46,7 +46,7 @@ class PhpTest extends WithUser
     public function testGetNested()
     {
         $this
-            ->get('polyglot/api/L10n/en/nested.php')
+            ->get('polyglot/api/L10n/en/nested')
             ->dump()
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) {
@@ -62,14 +62,14 @@ class PhpTest extends WithUser
         $value = Str::random();
 
         $this
-            ->post('polyglot/api/L10n/en/plain.php', [
+            ->post('polyglot/api/L10n/en/plain', [
                 'key' => 'test',
                 'value' => $value
             ])
             ->assertStatus(200);
 
         $this
-            ->get('polyglot/api/L10n/en/plain.php')
+            ->get('polyglot/api/L10n/en/plain')
             ->dump()
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) use ($value) {
@@ -84,14 +84,14 @@ class PhpTest extends WithUser
         $value = Str::random();
 
         $this
-            ->post('polyglot/api/L10n/en/nested.php', [
+            ->post('polyglot/api/L10n/en/nested', [
                 'key' => 'between.test',
                 'value' => $value
             ])
             ->assertStatus(200);
 
         $this
-            ->get('polyglot/api/L10n/en/nested.php')
+            ->get('polyglot/api/L10n/en/nested')
             ->dump()
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) use ($value) {
@@ -104,14 +104,14 @@ class PhpTest extends WithUser
     public function testPostDropValue()
     {
         $this
-            ->post('polyglot/api/L10n/en/plain.php', [
+            ->post('polyglot/api/L10n/en/plain', [
                 'key' => 'test',
                 'value' => null
             ])
             ->assertStatus(200);
 
         $this
-            ->get('polyglot/api/L10n/en/plain.php')
+            ->get('polyglot/api/L10n/en/plain')
             ->dump()
             ->assertStatus(200)
             ->assertJson(function (AssertableJson $json) {
