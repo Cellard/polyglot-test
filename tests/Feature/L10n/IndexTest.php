@@ -4,7 +4,6 @@ namespace Tests\Feature\L10n;
 
 use Illuminate\Testing\Fluent\AssertableJson;
 use Tests\Feature\WithUser;
-use Tests\TestCase;
 
 class IndexTest extends WithUser
 {

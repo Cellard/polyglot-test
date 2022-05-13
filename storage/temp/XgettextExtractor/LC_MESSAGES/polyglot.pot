@@ -1,0 +1,25 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: easygettext\n"
+"Project-Id-Version: \n"
+
+#: /vendor/codewiser/polyglot/resources/js/translations.js:55
+msgid "message"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/translations.js:69
+msgctxt "context"
+msgid "message"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/translations.js:83
+msgid "singular"
+msgid_plural "plural"
+msgstr[0] ""
+msgstr[1] ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:104
+msgid "Working mode"
+msgstr ""

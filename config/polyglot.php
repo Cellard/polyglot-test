@@ -4,18 +4,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Polyglot mode
+    | Polyglot Switch
     |--------------------------------------------------------------------------
     |
-    | This option is used to enable or disable some polyglot functionality.
+    | Disabled Polyglot provides Artisan console command to extract translation
+    | strings and web panel to manage translations.
     |
-    | 'editor'     - use pure Laravel Translator; collect string manually.
-    | 'collector'   - use gettext for collecting string; use Laravel Translator for translating.
-    | 'translator'  — use gettext for collecting string and for translating too.
+    | Enabled Polyglot replaces Laravel Translator service, bringing Gettext
+    | support to the Application. With full backward compatability.
     |
     */
 
-    'mode' => env('POLYGLOT_MODE', 'editor'),
+    'enabled' => env('POLYGLOT_ENABLED', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -23,11 +23,41 @@ return [
     |--------------------------------------------------------------------------
     |
     | The application locales determines the listing of locales that will be used
-    | by the translation service provider. This option is required to populate
-    | translation strings across locales.
+    | by Polyglot to populate collected translation strings across locales.
+    |
+    | To avoid server specific issues use locale names applicable to
+    | https://www.php.net/manual/ru/function.setlocale.php function.
+    |
+    | To set gettext locale just define LOCALE_{LANG} env.
+    | For example, LOCALE_EN=en_US
     |
     */
-    'locales' => ['en'],
+
+    'locales' => ['en', 'ru'],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Xgettext Extractor Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Gettext groups translations into 'text domains', so we need to configure
+    | at least one. For every text domain configure source files and folders
+    | to parse and optionally exclude some files and folders from being parsed.
+    |
+    */
+
+    'sources' => [
+        [
+            'include' => [
+                base_path('vendor/codewiser/polyglot/resources/js'),
+                base_path('vendor/codewiser/polyglot/resources/views'),
+                base_path('vendor/codewiser/polyglot/src'),
+            ],
+            'exclude' => [
+                base_path('vendor/codewiser/polyglot/resources/js/translations.js')
+            ],
+        ]
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -75,55 +105,27 @@ return [
     | Gettext Executables Configuration
     |--------------------------------------------------------------------------
     |
-    | Paths to gettext shell scripts.
+    | Paths to gettext binaries.
     |
     */
+
     'executables' => [
         'xgettext' => env('XGETTEXT_EXECUTABLE', 'xgettext'),
         'msginit' => env('MSGINIT_EXECUTABLE', 'msginit'),
         'msgmerge' => env('MSGMERGE_EXECUTABLE', 'msgmerge'),
         'msgfmt' => env('MSGFMT_EXECUTABLE', 'msgfmt'),
-        'msgcat' => env('MSGCAT_EXECUTABLE', 'msgcat')
+        'msgcat' => env('MSGCAT_EXECUTABLE', 'msgcat'),
+        'npm_xgettext' => env('NPM_EASYGETTEXT', 'gettext-extract')
     ],
 
     /*
     |--------------------------------------------------------------------------
-    | Gettext Collector Configuration
+    | Polyglot Logger
     |--------------------------------------------------------------------------
     |
-    | Define resources to search translation strings in, exclude some resources
-    | and store collected strings in configurable folder.
+    | Boolean.
     |
     */
-    'collector' => [
-        'includes' => [
-            app_path(),
-            //resource_path('views')
-        ],
-        'excludes' => [
-            storage_path()
-        ],
-        'storage' => resource_path('lang')
-    ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Gettext Translator Configuration
-    |--------------------------------------------------------------------------
-    |
-    | Define folders to keep gettext files, set default gettext domain and list
-    | translation strings that should be translated traditional way.
-    |
-    */
-    'translator' => [
-        'po' => resource_path('gettext'),
-        'mo' => resource_path('gettext'),
-
-        'domain' => 'messages',
-
-        'passthroughs' => [
-            'plain.',
-            'nested.',
-        ],
-    ],
+    'log' => env('POLYGLOT_LOG', false),
 ];

@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Application package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Application\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-27 15:40+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:121
+msgid "Application Locales"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:236
+msgid "Close"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/FileViewer.vue:102
+msgid "Context"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:206
+msgid "Developer Comments"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:99
+msgid "Editor"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:129
+msgid "Fuzzy"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/FileViewer.vue:129
+msgid "Header"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/FileViewer.vue:73
+msgid "Headers"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:156
+msgid "Last collected"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:163
+msgid "Last compiled"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:134
+msgid "Last translated"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:92
+#: /vendor/codewiser/polyglot/resources/js/screens/L10n/index.vue:60
+msgid "Loading..."
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:135
+msgid "Message Context"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:141
+msgid "Plural Strings"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:152
+msgid "Plural Translations"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:112
+msgid "Polyglot provides Translation Service with Gettext support"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:115
+msgid "Polyglot works as online Translation Editor"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:229
+msgid "References"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:241
+msgid "Save changes"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/L10n/index.vue:45
+msgid "Search"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/FileViewer.vue:89
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:142
+msgid "String"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/FileViewer.vue:70
+msgid "Strings"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:165
+msgid "The last time the gettext files were compiled"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:136
+msgid "The last time the translation files were modified"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:158
+msgid "The last time the translation strings were collected"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/views/layout.blade.php:66
+msgid "The published Polyglot assets are not up-to-date with the installed version. To update, run:"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/L10n/index.vue:72
+msgid "There aren't any files."
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/FileViewer.vue:122
+msgid "There aren't any headers."
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/FileViewer.vue:82
+msgid "There aren't any strings."
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:112
+msgid "This translation string is removed from source code and marked as obsolete. Do not spend you time for it."
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:115
+msgid "This translation string might not be a correct translation (anymore). Check if the translation requires further modification, or is acceptable as is."
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/FileViewer.vue:90
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:153
+msgid "Translation"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:109
+msgid "Translation Editor"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:106
+msgid "Translation Service"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:141
+msgid "Translation progress"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/FileViewer.vue:108
+msgid "Translator"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/src/Http/Controllers/i18nController.php:29
+#: /vendor/codewiser/polyglot/src/Http/Controllers/i18nController.php:30
+#: /vendor/codewiser/polyglot/src/Http/Controllers/i18nController.php:31
+msgid "Unknown"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/FileViewer.vue:130
+msgid "Value"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/screens/i18n/index.vue:104
+msgid "Working mode"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:216
+msgid "Your Comment"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/js/components/Editor.vue:159
+msgid "copy from above"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/views/layout.blade.php:49
+msgid "polyglot::menu.dashboard"
+msgstr ""
+
+#: /vendor/codewiser/polyglot/resources/views/layout.blade.php:57
+msgid "polyglot::menu.translate"
+msgstr ""
