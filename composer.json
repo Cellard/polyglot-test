@@ -12,6 +12,7 @@
     "ext-gettext": "*",
     "codewiser/folks": "^1.0",
     "codewiser/polyglot": "^0.7",
+    "codewiser/postie": "^1.0",
     "fruitcake/laravel-cors": "^2.0",
     "guzzlehttp/guzzle": "^7.0.1",
     "laravel/fortify": "^1.12",
@@ -76,6 +77,10 @@
     {
       "type": "path",
       "url": "../folks"
+    },
+    {
+      "type": "path",
+      "url": "../postie"
     }
   ]
 }
